@@ -1,5 +1,5 @@
 # Initechtris
-[Initechtris Live App](url "https://calb3ars.github.io/tetris-Initechtris/")<br />
+[Initechtris Live App](https://calb3ars.github.io/tetris-Initechtris/)<br />
 
 ### Background
 Initechtris is a frontend JavaScript game based off the classic Tetris puzzle game. The original Tetris is a single player game where a falling Tetromino (four-square block with one of several configurations) falls across a board and stops when it hits another set block or the bottom of the board. The player positions and rotates the falling piece in 90&deg; increments so the falling piece settles into an empty space. The goal of the game is to create filled horizontal lines, at which point the filled line will disappear and any lines above the filled line will drop down.
