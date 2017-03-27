@@ -23,7 +23,7 @@ This app will populate a single screen with centered gameboard and controls map 
 
 ### Architecture & Technologies
 Initechtris will feature the following technologies:
-* Vanilla JavaScript for structure and logic
+* Vanilla JavaScript for gameplay and puzzle logic
 * HTML5 Canvas and jQuery for rendering and DOM manipulation
 * Webpack to bundle scripts and serve them to the index.html
 
