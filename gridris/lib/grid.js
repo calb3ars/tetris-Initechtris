@@ -33,10 +33,7 @@
       this.placeholder = options.placeholder;
     }
     this.$placeholder = $(this.placeholder);
-    if (!this.placeholder || this.$placeholder.length === 0) {
-      console.error('Placeholder is not present');
-      return;
-    }
+
     var i, j, $row, $cell, cell, cellId = 0;
     for (i = 0; i < this.rowsCount; i += 1) {
       this.grid[i] = [];
@@ -56,5 +53,4 @@
   }
 }
 
-module.exports = Cell;
-module.exports = Grid;
+// complaint about modules not being defined when exporting Grid
