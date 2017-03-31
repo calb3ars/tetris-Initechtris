@@ -2,6 +2,7 @@ let gameClock = 0;
 let gameInterval = 500;
 
 let lastTime = 0;
+let paused = true;
 
 const COLORS = [
     null,
@@ -56,21 +57,28 @@ window.addEventListener('keydown', event => {
   switch(event.keyCode) {
     case 37:
       shift(-1);
+      // document.getElementById('left').style.textShadow = "2px 2px 0 black";
       break;
     case 39:
       shift(1);
+      // document.getElementById('right').style.textShadow = "2px 2px 0 black";
       break;
     case 40:
       drop();
+      // document.getElementById('down').style.textShadow = "2px 2px 0 black";
       break;
     case 90:
       rotate(-1);
       break;
     case 32:
       rotate(1);
+      // document.getElementById('space').style.textShadow = "2px 2px 0 black";
       break;
     case 81:
       resetGame();
+      break;
+    case 13:
+      pause();
       break;
   }
 });
@@ -90,29 +98,31 @@ const game = () => {
   resetPiece();
   addScore();
   animate();
+
 };
 
-// const playing = false;
-//
-// const hide = (id) => {
-//   document.getElementBy(id).style.visibility = 'hidden';
-// };
-//
-// const show = (id) => {
-//   document.getElementBy(id).style.visibility = null;
-// };
-//
-// const play = () => {
-//   hide('start');
-//   resetGame();
-//   playing = true;
-// };
-//
-// const lose = () => {
-//   show('start');
-//   resetGame();
-//   playing = false;
-// };
+const animate = (currentTime = 0) => {
+  const elapsedTime = currentTime - lastTime;
+  if (!paused) {
+    gameClock += elapsedTime;
+  }
+  if (gameClock > gameInterval) {
+    drop();
+  }
+  lastTime = currentTime;
+  render();
+  requestAnimationFrame(animate);
+};
+
+const pause = () => {
+  paused = (paused === true ? false : true );
+};
+
+const resetGame = () => {
+  board.forEach(row => row.fill(0));
+  piece.score = 0;
+  addScore();
+};
 
 const renderGrid = (grid, delta) => {
   for (let y = 0; y < grid.length; y++) {
@@ -131,18 +141,6 @@ const render = () => {
 
   renderGrid(board, {x: 0, y: 0});
   renderGrid(piece.grid, piece.pos);
-};
-
-const animate = (currentTime = 0) => {
-  const elapsedTime = currentTime - lastTime;
-
-  gameClock += elapsedTime;
-  if (gameClock > gameInterval) {
-    drop();
-  }
-  lastTime = currentTime;
-  render();
-  requestAnimationFrame(animate);
 };
 
 // New Piece and Board functions
@@ -251,12 +249,6 @@ const resetPiece = () => {
   if (collision(board, piece)) {
     resetGame();
   }
-};
-
-const resetGame = () => {
-  board.forEach(row => row.fill(0));
-  piece.score = 0;
-  addScore();
 };
 
 const filledRow = () => {

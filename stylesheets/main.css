@@ -135,6 +135,16 @@ h2 {
       1px 1px 0 #57B09F;
 }
 
+.return {
+  color: white;
+  text-shadow:
+      2px 1px 0 #57B09F,
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #57B09F;
+}
+
 .header-logo {
   background: url("https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0024/6465/brand.gif?itok=WXRZKWKU");
   background-repeat: no-repeat;
