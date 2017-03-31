@@ -95,7 +95,12 @@ const ctx = canvas.getContext('2d');
 ctx.scale(20, 20);
 
 const game = () => {
-  // if paused, render text to Press Return to start game
+  if (paused) {
+    document.getElementById('score').innerHTML = "Press Enter to Play";
+  } else {
+    document.getElementById('score').innerHTML = this.score;
+  }
+
   resetPiece();
   addScore();
   animate();
@@ -117,18 +122,19 @@ const animate = (currentTime = 0) => {
 
 const pause = () => {
   if (paused === true) {
-    document.getElementById('score').innerHTML = "Press Enter to Play";
-  } else {
     document.getElementById('score').innerHTML = piece.score;
+  } else {
+    document.getElementById('score').innerHTML = "Press Enter to Play";
   }
   paused = (paused === true ? false : true );
-  document.getElementById('score').innerHTML = piece.score;
+  // document.getElementById('score').innerHTML = piece.score;
 };
 
 const resetGame = () => {
   board.forEach(row => row.fill(0));
   piece.score = 0;
   addScore();
+  document.getElementById('score').innerHTML = "Press Enter to Play";
   pause();
 };
 
@@ -257,8 +263,6 @@ const resetPiece = () => {
   if (collision(board, piece)) {
     board.forEach(row => row.fill(0));
     resetGame();
-    pause();
-    document.getElementById('score').innerHTML = "Press Enter to Begin";
   }
 };
 
