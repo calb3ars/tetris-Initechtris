@@ -122,12 +122,12 @@ const animate = (currentTime = 0) => {
 };
 
 const pause = () => {
-  if (paused === true) {
+  paused = (paused === true ? false : true );
+  if (paused === false) {
     document.getElementById('score').innerHTML = piece.score;
   } else {
-    document.getElementById('score').innerHTML = "Press Enter to Play";
+    document.getElementById('score').innerHTML = "Press Enter";
   }
-  paused = (paused === true ? false : true );
   // document.getElementById('score').innerHTML = piece.score;
 };
 
