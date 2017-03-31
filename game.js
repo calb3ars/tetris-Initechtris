@@ -9,6 +9,10 @@ class Game {
     this.gameover = false;
   }
 
+  animate() {
+    this.piece
+  }
+
   gameover(){
     // check top row for any non-zero values
     const topRow = this.board[0];
@@ -30,4 +34,3 @@ class Game {
   }
 
 }
-module.exports = Game;

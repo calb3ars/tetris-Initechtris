@@ -62,5 +62,3 @@ class Board {
     this.matrix.forEach(row => row.fill(0));
   }
 }
-
-module.exports = Board;

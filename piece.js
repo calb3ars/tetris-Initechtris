@@ -2,7 +2,7 @@ class Piece {
   constructor(game) {
     this.pos = {x: 0, y: 0};
     this.matrix =  null;
-    this.score = 0; // move to game
+    this.score = 0;
     this.game = game;
 
     this.dropCounter = 0;
@@ -90,35 +90,3 @@ class Piece {
   }
 
 }
-
-
-module.exports = Piece;
-
-
-
-
-
-
-// transpose(matrix, direction) {
-//   const result = [];
-//
-//   for(let i = 0; i < matrix.length; i++) {
-//     result.push([]);
-//   }
-//
-//   for (let i = 0; i < matrix.length; i++) {
-//     for (let j = 0; j < matrix[i].length; j++) {
-//       result[j].push(matrix[i][j]);
-//     };
-//   };
-//   console.log(result);
-
-  // if (direction > 0) {
-  //   console.log(result);
-  //   result.forEach(row => row.reverse());
-  // } else {
-  //   console.log(result);
-  //   console.log("-1");
-  //   result.reverse();
-  // }
-// }
