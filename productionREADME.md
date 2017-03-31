@@ -12,7 +12,7 @@ tracking
 merging
 rotation and awareness of sides and set pieces
 
-
+![Gameplay gif](http://res.cloudinary.com/calb3ars/image/upload/v1490944512/tetris4_ikijjm.gif)
 ##### Clearing of Rows
 
 

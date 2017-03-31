@@ -92,6 +92,28 @@ const game = () => {
   animate();
 };
 
+// const playing = false;
+//
+// const hide = (id) => {
+//   document.getElementBy(id).style.visibility = 'hidden';
+// };
+//
+// const show = (id) => {
+//   document.getElementBy(id).style.visibility = null;
+// };
+//
+// const play = () => {
+//   hide('start');
+//   resetGame();
+//   playing = true;
+// };
+//
+// const lose = () => {
+//   show('start');
+//   resetGame();
+//   playing = false;
+// };
+
 const renderGrid = (grid, delta) => {
   for (let y = 0; y < grid.length; y++) {
     for(let x=0; x < grid[y].length; x++) {

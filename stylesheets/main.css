@@ -175,4 +175,8 @@ h2 {
   .sponsor-window {
     display: none;
   }
+
+  .id-card {
+    margin-right: 50px;
+  }
 }
