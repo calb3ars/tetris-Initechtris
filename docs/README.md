@@ -11,7 +11,7 @@ The game ends if the pieces stack up and reach the top of the board.
 - [ ] User controls to rotate and position falling piece (Tetromino)
 - [ ] Game renders different Tetrominos as the falling piece
 - [ ] Board clears a filled horizontal line
-- [ ] Game keeps track of score and reset when a new game begins
+- [ ] Game keeps track of score and resets when a new game begins
 
 In addition, this project will include:
 - [ ] Sidebar with key mappings and controls
