@@ -8,17 +8,18 @@ The game ends if the pieces stack up and reach the top of the board.
 
 ### Features & Implementation
 ##### Piece movement
-tracking
-merging
-rotation and awareness of sides and set pieces
+Pieces are created as two-dimensional arrays with 0's or a number based on whether the individual cell area is occupied or not (0 is blank). The pieces are all squares to assist with calculations for rotation.
+
+A piece is created by drawing its matrix onto the board grid and automatically invoking the drop function. Since every position within the board has a chance for a collision, each drop action checks for collisions with the boundaries of the board and any set pieces. If a collision with a set piece is detected, the current piece is combined with the existing board pieces and a new piece is generated at the top.
+
+Rotation is handled by transposing the 2D array. During the rotation function, the game checks to see if the space equivalent to the length of the piece after rotation is unoccupied. If the space is occupied, the piece cannot rotate and the piece returns to its original orientation.
 
 ![Gameplay gif](http://res.cloudinary.com/calb3ars/image/upload/v1490944512/tetris4_ikijjm.gif)
+
 ##### Clearing of Rows
 
 
 ##### Follow Accounts
-
-##### Styling
 
 
 ### Future Features
