@@ -11,6 +11,7 @@ The game ends if the pieces stack up and reach the top of the board.
 - [ ] User controls to rotate and position falling piece (Tetromino)
 - [ ] Game renders different Tetrominos as the falling piece
 - [ ] Board clears a filled horizontal line
+- [ ] Game keeps track of score and reset when a new game begins
 
 In addition, this project will include:
 - [ ] Sidebar with key mappings and controls
@@ -25,22 +26,6 @@ This app will populate a single screen with centered gameboard and controls map 
 Initechtris will feature the following technologies:
 * Vanilla JavaScript for gameplay and puzzle logic
 * HTML5 Canvas and jQuery for rendering and DOM manipulation
-* Webpack to bundle scripts and serve them to the index.html
-
-The webpack entry file will bundle up the following scripts:
-  * game.js
-  * board.js
-  * piece.js
-  * matrix.js
-  * gameview.js
-  * tetris.js
-
-`game.js` will control the start, reset, and pausing of the game.
-`board.js` will hold the pieces and map the logic of pieces falling in addition to any complete lines.
-`piece.js` will hold the logic for piece orientation and color.
-`matrix.js` will hold functions for creating and rendering boards and pieces.
-`gameview.js` will hold key mappings for user control.
-`tetris.js` will connect the game to the DOM.
 
 ### Implementation Timeline
 ##### Day 1: Board and Falling Piece setup
@@ -54,6 +39,5 @@ The webpack entry file will bundle up the following scripts:
 
 ### Bonus Features:
 If time permits, I'd like to implement the following features
-- [ ] Bonus: Direct messaging between accounts
 - [ ] Bonus: Styling easter eggs if the user inputs specific names "Peter," Lumbergh," or "Michael"
 - [ ] Bonus: Game modes based on user's name input (`Peter` has orange "Cheeto" sticks fall down the screen, `Milton`'s pieces are red "S" Tetrominos, `Lumbergh` has "Yeah..." flash in the score section when a line is cleared)
