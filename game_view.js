@@ -58,19 +58,19 @@ window.addEventListener('keydown', event => {
     case 37:
       if(!paused) {
         shift(-1);
-        // document.getElementById('left').style.textShadow = "2px 2px 0 black";
+        // document.getElementById('left').style.textShadow = "2px 2px 0 white";
       }
       break;
     case 39:
       if(!paused) {
         shift(1);
-      // document.getElementById('right').style.textShadow = "2px 2px 0 black";
+      // document.getElementById('right').style.textShadow = "2px 2px 0 white";
       }
       break;
     case 40:
       if(!paused) {
         drop();
-      // document.getElementById('down').style.textShadow = "2px 2px 0 black";
+      // document.getElementById('down').style.textShadow = "2px 2px 0 white";
       }
       break;
     case 90:
@@ -81,7 +81,7 @@ window.addEventListener('keydown', event => {
     case 32:
       if(!paused) {
         rotate(1);
-        // document.getElementById('space').style.textShadow = "2px 2px 0 black";
+        // document.getElementById('space').style.textShadow = "2px 2px 0 white";
       }
       break;
     case 13:

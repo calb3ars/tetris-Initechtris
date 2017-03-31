@@ -6,6 +6,10 @@ Gameplay is similar to the original Tetris game. A single piece (Tetromino) fall
 
 The game ends if the pieces stack up and reach the top of the board.
 
+
+### Technologies
+Initechtris is built on JavaScript and HTML5 Canvas. The game uses requestAnimationFrame as a polyfill to render the game while JavaScript calculates the game updates. Initechtris uses jQuery to select and manipulate DOM elements, but other JS libraries were intentionally left out.
+
 ### Features & Implementation
 ##### Piece movement
 Pieces are created as two-dimensional arrays with 0's or a number based on whether the individual cell area is occupied or not (0 is blank). The pieces are all squares to assist with calculations for rotation.
@@ -35,7 +39,6 @@ while (collision(board, piece)) {
 ```
 
 ![Rotate gif](http://res.cloudinary.com/calb3ars/image/upload/v1490963952/rotate2_erjt3p.gif)
-
 
 ### Future Features
 

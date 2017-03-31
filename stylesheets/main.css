@@ -181,6 +181,10 @@ h2 {
   vertical-align: middle;
 }
 
+audio {
+  margin-top: 30px;
+}
+
 @media only screen and (max-width: 900px) {
   .sponsor-window {
     display: none;
