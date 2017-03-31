@@ -7,7 +7,7 @@ Initechtris is a frontend JavaScript game based off the classic Tetris puzzle ga
 The game ends if the pieces stack up and reach the top of the board.
 
 ### Functionality & MVP
-- [ ] Start, pause, and reset board
+- [ ] Start, pause a game
 - [ ] User controls to rotate and position falling piece (Tetromino)
 - [ ] Game renders different Tetrominos as the falling piece
 - [ ] Board clears a filled horizontal line

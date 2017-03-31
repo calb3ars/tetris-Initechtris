@@ -56,26 +56,33 @@ window.addEventListener('keydown', event => {
   event.preventDefault();
   switch(event.keyCode) {
     case 37:
-      shift(-1);
-      // document.getElementById('left').style.textShadow = "2px 2px 0 black";
+      if(!paused) {
+        shift(-1);
+        // document.getElementById('left').style.textShadow = "2px 2px 0 black";
+      }
       break;
     case 39:
-      shift(1);
+      if(!paused) {
+        shift(1);
       // document.getElementById('right').style.textShadow = "2px 2px 0 black";
+      }
       break;
     case 40:
-      drop();
+      if(!paused) {
+        drop();
       // document.getElementById('down').style.textShadow = "2px 2px 0 black";
+      }
       break;
     case 90:
-      rotate(-1);
+      if(!paused) {
+        rotate(-1);
+      }
       break;
     case 32:
-      rotate(1);
-      // document.getElementById('space').style.textShadow = "2px 2px 0 black";
-      break;
-    case 81:
-      resetGame();
+      if(!paused) {
+        rotate(1);
+        // document.getElementById('space').style.textShadow = "2px 2px 0 black";
+      }
       break;
     case 13:
       pause();
@@ -95,12 +102,6 @@ const ctx = canvas.getContext('2d');
 ctx.scale(20, 20);
 
 const game = () => {
-  if (paused) {
-    document.getElementById('score').innerHTML = "Press Enter to Play";
-  } else {
-    document.getElementById('score').innerHTML = this.score;
-  }
-
   resetPiece();
   addScore();
   animate();
@@ -134,7 +135,6 @@ const resetGame = () => {
   board.forEach(row => row.fill(0));
   piece.score = 0;
   addScore();
-  document.getElementById('score').innerHTML = "Press Enter to Play";
   pause();
 };
 
