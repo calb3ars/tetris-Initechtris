@@ -179,12 +179,12 @@ const newPiece = (type) => {
 //Piece Movement functions
 const rotate = (direction) => {
   const pos = piece.pos.x;
-  let delta = 1;
+  let shift = 1;
   transpose(piece.grid, direction);
   while (collision(board, piece)) {
-    piece.pos.x += delta;
-    delta = -(delta + (delta > 0 ? 1 : -1));
-    if (delta > piece.grid[0].length) {
+    piece.pos.x += shift;
+    shift = -(shift + (shift > 0 ? 1 : -1));
+    if (shift > piece.grid[0].length) {
       rotate(piece.grid, -direction);
       piece.pos.x = pos;
       return;
@@ -194,14 +194,17 @@ const rotate = (direction) => {
 
 const transpose = (grid, direction) => {
   for (let y = 0; y < grid.length; y++) {
-    for (let x = 0; x < y; ++x) {
+    for (let x = 0; x < y; x++) {
+      // flip across x = y axis
       [ grid[x][y], grid[y][x] ] = [ grid[y][x], grid[x][y] ];
     }
   }
 
+  // reverse each row to get 90 degree rotation to right
   if (direction > 0) {
     grid.forEach(row => row.reverse());
   } else {
+  // reverse entire grid to get 90 degree rotation to left
     grid.reverse();
   }
 };

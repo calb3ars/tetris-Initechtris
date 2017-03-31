@@ -10,16 +10,31 @@ The game ends if the pieces stack up and reach the top of the board.
 ##### Piece movement
 Pieces are created as two-dimensional arrays with 0's or a number based on whether the individual cell area is occupied or not (0 is blank). The pieces are all squares to assist with calculations for rotation.
 
-A piece is created by drawing its matrix onto the board grid and automatically invoking the drop function. Since every position within the board has a chance for a collision, each drop action checks for collisions with the boundaries of the board and any set pieces. If a collision with a set piece is detected, the current piece is combined with the existing board pieces and a new piece is generated at the top.
-
-Rotation is handled by transposing the 2D array. During the rotation function, the game checks to see if the space equivalent to the length of the piece after rotation is unoccupied. If the space is occupied, the piece cannot rotate and the piece returns to its original orientation.
+A piece is created by drawing its matrix onto the board grid and automatically invoking the drop function. Since every position within the board has a chance for a collision, each drop action checks for collisions with any set pieces. If a collision with a set piece is detected, the current piece is combined with the existing board pieces and a new piece is generated at the top.
 
 ![Gameplay gif](http://res.cloudinary.com/calb3ars/image/upload/v1490944512/tetris4_ikijjm.gif)
 
-##### Clearing of Rows
+##### Rotating Pieces
+Rotation is handled by transposing the 2D array across the x = y axis, then reversing each row. During the rotation function, the game checks to see if the space equivalent to the length of the piece after rotation is unoccupied. If the space to the side is occupied, the piece checks if it can still rotate but shifted the opposite direction from the obstacle. This allows the user to still receive their rotate action while avoiding collisions.
 
+``` JavaScript
+let shift = 1;
+// if collision, checks to see if valid shift in other direction exists
+while (collision(board, piece)) {
+  piece.pos.x += shift;
+  // moves piece back + 1 position
+  shift = -(shift + (shift > 0 ? 1 : -1));
+  // only check shifts equivalent to the piece's length
+  if (shift > piece.grid[0].length) {
+  // all possible shifts have been exhausted, reset piece back to original
+    rotate(piece.grid, -direction);
+    piece.pos.x = pos;
+    return;
+  }
+}
+```
 
-##### Follow Accounts
+![Rotate gif](http://res.cloudinary.com/calb3ars/image/upload/v1490963952/rotate2_erjt3p.gif)
 
 
 ### Future Features
