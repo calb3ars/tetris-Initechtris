@@ -2,7 +2,7 @@ let gameClock = 0;
 let gameInterval = 500;
 
 let lastTime = 0;
-let paused = true;
+let paused = false;
 
 const COLORS = [
     null,
@@ -105,7 +105,6 @@ const game = () => {
   resetPiece();
   addScore();
   animate();
-
 };
 
 const animate = (currentTime = 0) => {
@@ -135,7 +134,7 @@ const resetGame = () => {
   board.forEach(row => row.fill(0));
   piece.score = 0;
   addScore();
-  pause();
+  // pause();
 };
 
 const renderGrid = (grid, delta) => {
