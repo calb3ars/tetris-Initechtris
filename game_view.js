@@ -6,13 +6,20 @@ let paused = false;
 
 const COLORS = [
     null,
-    '#FF206E',
-    '#51A3A3',
-    '#D1D1D1',
-    '#498467',
-    '#FF9F1C',
-    '#7EB2DD',
-    '#C2FCF7',
+    // '#FF206E',
+    // '#51A3A3',
+    // '#D1D1D1',
+    // '#498467',
+    // '#FF9F1C',
+    // '#7EB2DD',
+    // '#C2FCF7',
+    '#c01d2e',
+    '#fcef7f',
+    '#4c3c3f',
+    '#4c3c3f',
+    '#4c3c3f',
+    '#4c3c3f',
+    '#4c3c3f',
 ];
 
 const PIECES = {
@@ -125,7 +132,7 @@ const pause = () => {
   if (paused === false) {
     document.getElementById('score').innerHTML = piece.score;
   } else {
-    document.getElementById('score').innerHTML = "Press Enter";
+    document.getElementById('score').innerHTML = "Paused";
   }
   // document.getElementById('score').innerHTML = piece.score;
 };
@@ -149,8 +156,9 @@ const renderGrid = (grid, delta) => {
 };
 
 const render = () => {
-  ctx.fillStyle = '#202028';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // ctx.fillStyle = '#fff';
+  // ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   renderGrid(board, {x: 0, y: 0});
   renderGrid(piece.grid, piece.pos);

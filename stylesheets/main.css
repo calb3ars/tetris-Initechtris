@@ -1,35 +1,73 @@
+@font-face {
+  font-family: 'Fink-Roman';
+  src: url('../assets/fonts/FinkRoman.eot');
+  src: url('../assets/fonts/FinkRoman.eot') format('embedded-opentype'),
+        url('../assets/fonts/FinkRoman.woff') format('woff'),
+        url('../assets/fonts/FinkRoman.ttf') format('truetype'),
+        url('../assets/fonts/FinkRoman.svg') format('svg');
+}
+
+
 body {
-  background: #202028;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  background: #fff;
+  
+  color: #c01d2e;
+  font-family: 'Fink-Roman', sans-serif;
+  font-size: 1.5em;
   text-align: center;
   box-sizing: border-box;
 }
 
-.sponsor-window {
-  line-height: 3em;
-  margin-top: 10px;
+.game {
+  height: 100%;
+  width: auto;
 }
 
-.initechtris {
+.office-space {
+  font-family: 'Fink-Roman';
+  font-size: 75px;
+  color: #c01d2e;
+  letter-spacing: -4px;
+  margin-bottom: -25px;
+}
+
+.capital-p {
+  font-size: 60px;
+  vertical-align: 20px;
+}
+
+.sponsor-window {
+  height: 70vh;
+  min-width: 350px;
+  line-height: 3em;
+  margin-top: 120px;
+  background: url('../assets/milton_cover.png');
+  background-repeat: no-repeat;
+}
+
+.sponsor-text {
+  height: 300px;
+  margin-top: -130px;
+}
+
+/*.initechtris {
   text-transform: uppercase;
   color: #57B09F;
   font-size: 4em;
   font-style: italic;
   -webkit-text-stroke: 1px black;
-  color: white;
+  color: #aaa;
   text-shadow:
       3px 3px 0 #57B09F,
     -2px -2px 0 #000,
      2px -2px 0 #000,
      -2px 2px 0 #000,
       2px 2px 0 #57B09F;
-}
+}*/
 
-.initech {
+/*.initech {
   text-transform: uppercase;
-  color: white;
+  color: #aaa;
   text-shadow:
       2px 2px 0 #57B09F,
     -1px -1px 0 #fff,
@@ -38,13 +76,13 @@ body {
       1px 1px 0 #57B09F;
   font-size: 2em;
   font-style: italic;
-}
+}*/
 
-/*.swingline {
+.swingline {
   font-family: 'Damion', cursive;
   font-size: 2em;
   color: #ce2029;
-}*/
+}
 .tagline {
   font-family: 'Damion', cursive;
   font-size: 2em;
@@ -63,126 +101,87 @@ body {
 
 .game-window {
   border: 2px solid ##57B09F;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 canvas {
-  border: 0.5em solid #57B09F;
+  border: 5px solid #c01d2e;
   /*margin-top: 70px;*/
   height: 90vh;
-  margin-left: 40px;
-  margin-right: 40px;
+  /*margin-left: 40px;
+  margin-right: 40px;*/
   border-radius: 2px;
 }
 
 .game-panel {
-  font-size: 1.5em;
+  font-size: 0.9em;
   line-height: 1.5em;
+  text-align: left;
 }
 
 .score-text {
-  font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
-  text-shadow:
-    2px 1px 0 #57B09F,
+  /*padding-top: 300px;*/
+  font-size: 1.25em;
+  font-family: 'Fink-Roman';
+  text-align: left;
+  /*text-shadow:
+    2px 1px 0 #c01d2e,
   -1px -1px 0 #000,
    1px -1px 0 #000,
    -1px 1px 0 #000,
-    1px 1px 0 #57B09F;
-    margin-bottom: 10px;
+    1px 1px 0 #c01d2e;
+    margin-bottom: 10px;*/
 }
 
 #score {
-  font-size: 2em;
-  font-family: 'Montserrat', sans-serif;
-  text-shadow:
-    2px 1px 0 #57B09F,
+  font-size: 2.5em;
+  font-family: 'Fink-Roman', serif;
+  padding-bottom: 40px;
+  /*text-align: left;*/
+  /*text-shadow:
+    2px 1px 0 #c01d2e,
   -1px -1px 0 #000,
    1px -1px 0 #000,
    -1px 1px 0 #000,
-    1px 1px 0 #57B09F;
-  margin-bottom: 20px;
+    1px 1px 0 #c01d2e;
+  margin-bottom: 20px;*/
+}
+
+.lumbergh {
+  background: url('../assets/lumbergh.png');
+  background-size: 250px 500px;
+  height: 700px;
+  width: 400px;
+  background-repeat: no-repeat;
+  /*float: left;*/
+  position: absolute;
+  left: 900px;
+  top: 100px;
 }
 
 h2 {
-  color: white;
-  text-shadow:
-    2px 1px 0 #57B09F,
+  font-family: 'Fink-Roman', serif;
+  font-size: 2.5em;
+  color: #c01d2e;
+  /*text-shadow:
+    2px 1px 0 #c01d2e,
   -1px -1px 0 #000,
    1px -1px 0 #000,
    -1px 1px 0 #000,
-    1px 1px 0 #57B09F;
+    1px 1px 0 #c01d2e;
   font-size: 1.75em;
-  margin-bottom: 10px;
+  margin-bottom: 10px;*/
+}
+
+.controls {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #c01d2e;
 }
 
 .arrow {
-  color: white;
-  text-shadow:
-      3px 3px 0 #57B09F,
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-     -2px 2px 0 #000,
-      2px 2px 0 #57B09F;
-}
-
-.space {
-  color: white;
-  text-shadow:
-      2px 1px 0 #57B09F,
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-      1px 1px 0 #57B09F;
-}
-
-.return {
-  color: white;
-  text-shadow:
-      2px 1px 0 #57B09F,
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-      1px 1px 0 #57B09F;
-}
-
-.header-logo {
-  background: url("https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0024/6465/brand.gif?itok=WXRZKWKU");
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 125px;
-}
-
-.id-card {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
-  color: #000;
-  margin-top: 50px;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10px;
-  height: 250px;
-}
-
-.employee {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.bio {
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-  margin-left: 45px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-audio {
-  margin-top: 30px;
+  margin: 0 5px;
 }
 
 @media only screen and (max-width: 900px) {
