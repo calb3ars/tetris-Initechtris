@@ -186,12 +186,12 @@ h2 {
   margin: 0 5px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .sponsor-window {
     display: none;
   }
-
-  .id-card {
-    margin-right: 50px;
+  .game-panel {
+    margin-left: 40px;
+    margin-top: -40px;
   }
 }
