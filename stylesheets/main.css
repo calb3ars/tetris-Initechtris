@@ -25,8 +25,16 @@ body {
   font-family: 'Fink-Roman';
   font-size: 75px;
   color: #c01d2e;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
   margin-bottom: -25px;
+
+  -webkit-text-stroke: 1.5px #fff;
+  text-shadow:
+    3px 3px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -4px 4px 0 #000,
+    4px 4px 0 #000;
 }
 
 .capital-p {
@@ -39,54 +47,37 @@ body {
   min-width: 350px;
   line-height: 3em;
   margin-top: 120px;
-  background: url('../assets/milton_cover.png');
+  /*background: url('../assets/milton_cover.png');*/
   background-repeat: no-repeat;
 }
 
 .sponsor-text {
   height: 300px;
-  margin-top: -130px;
+  /*margin-top: -130px;*/
+  margin-top: 140px;
+  text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
 
-/*.initechtris {
-  text-transform: uppercase;
-  color: #57B09F;
-  font-size: 4em;
-  font-style: italic;
-  -webkit-text-stroke: 1px black;
-  color: #aaa;
-  text-shadow:
-      3px 3px 0 #57B09F,
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-     -2px 2px 0 #000,
-      2px 2px 0 #57B09F;
-}*/
-
-/*.initech {
-  text-transform: uppercase;
-  color: #aaa;
-  text-shadow:
-      2px 2px 0 #57B09F,
-    -1px -1px 0 #fff,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-      1px 1px 0 #57B09F;
-  font-size: 2em;
-  font-style: italic;
-}*/
 
 .swingline {
-  font-family: 'Damion', cursive;
+  vertical-align: middle;
+  width: 200px;
+  /*height: 50px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background: url('../assets/swingline.svg');
+  position: relative;
+  left: 200px;
+  top: -60px;*/
+  /*font-family: 'Damion', cursive;
   font-size: 2em;
   color: #ce2029;
+  -webkit-text-stroke: 1px #fff;*/
 }
-.tagline {
-  font-family: 'Damion', cursive;
-  font-size: 2em;
-  /*color: #ce2029;*/
-}
-
 
 .game {
   margin: 0 auto;
@@ -95,20 +86,28 @@ body {
   padding-top: 25px;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: url('../assets/printer_attack.png');
+  background-size: cover;
+  background-position: 60;
+  background-repeat: no-repeat;
 }
 
 .game-window {
   border: 2px solid ##57B09F;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 30px;
+  margin-top: -45px;
 }
 
 canvas {
   border: 5px solid #c01d2e;
   /*margin-top: 70px;*/
   height: 90vh;
-  margin-left: 40px;
-  margin-right: 120px;
+  margin-left: 20px;
+  /*margin-right: 120px;*/
+  /*margin-right: 100px;*/
   border-radius: 2px;
   z-index: 100;
 }
@@ -116,8 +115,16 @@ canvas {
 .game-panel {
   font-size: 0.9em;
   line-height: 1.5em;
-  text-align: left;
-  margin-top: -250px;
+  text-align: center;
+  /*margin-top: -250px;*/
+  margin-top: 150px;
+  -webkit-text-stroke: 1.5px #fff;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;
 }
 
 .score-text {
@@ -126,13 +133,6 @@ canvas {
   font-family: 'Fink-Roman';
   text-align: left;
   margin-bottom: 15px;
-  /*text-shadow:
-    2px 1px 0 #c01d2e,
-  -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-    1px 1px 0 #c01d2e;
-    margin-bottom: 10px;*/
 }
 
 #score {
@@ -151,21 +151,15 @@ canvas {
 
 .lumbergh {
   background: url('../assets/printer.png');
-  background-size: 420px 420px;
-  height: 420px;
-  width: 420px;
+  background-size: 430px 430px;
+  height: 430px;
+  width: 430px;
   background-repeat: no-repeat;
   float: right;
   position: relative;
   left: 0px;
   top: -420px;
   z-index: -1;
-}
-
-.printer {
-  background: url('../assets/printer.png');
-  height: 600px;
-  width: 600px;
 }
 
 h2 {
