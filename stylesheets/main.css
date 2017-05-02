@@ -10,17 +10,15 @@
 
 body {
   background: #fff;
-  
+
   color: #c01d2e;
   font-family: 'Fink-Roman', sans-serif;
   font-size: 1.5em;
   text-align: center;
   box-sizing: border-box;
-}
-
-.game {
-  height: 100%;
-  width: auto;
+  margin-left: -60px;
+  max-height: 500px;
+  overflow: hidden;
 }
 
 .office-space {
@@ -109,22 +107,25 @@ canvas {
   border: 5px solid #c01d2e;
   /*margin-top: 70px;*/
   height: 90vh;
-  /*margin-left: 40px;
-  margin-right: 40px;*/
+  margin-left: 40px;
+  margin-right: 120px;
   border-radius: 2px;
+  z-index: 100;
 }
 
 .game-panel {
   font-size: 0.9em;
   line-height: 1.5em;
   text-align: left;
+  margin-top: -250px;
 }
 
 .score-text {
   /*padding-top: 300px;*/
-  font-size: 1.25em;
+  font-size: 2.0em;
   font-family: 'Fink-Roman';
   text-align: left;
+  margin-bottom: 15px;
   /*text-shadow:
     2px 1px 0 #c01d2e,
   -1px -1px 0 #000,
@@ -149,20 +150,27 @@ canvas {
 }
 
 .lumbergh {
-  background: url('../assets/lumbergh.png');
-  background-size: 250px 500px;
-  height: 700px;
-  width: 400px;
+  background: url('../assets/printer.png');
+  background-size: 420px 420px;
+  height: 420px;
+  width: 420px;
   background-repeat: no-repeat;
-  /*float: left;*/
-  position: absolute;
-  left: 900px;
-  top: 100px;
+  float: right;
+  position: relative;
+  left: 0px;
+  top: -420px;
+  z-index: -1;
+}
+
+.printer {
+  background: url('../assets/printer.png');
+  height: 600px;
+  width: 600px;
 }
 
 h2 {
   font-family: 'Fink-Roman', serif;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #c01d2e;
   /*text-shadow:
     2px 1px 0 #c01d2e,
@@ -170,13 +178,13 @@ h2 {
    1px -1px 0 #000,
    -1px 1px 0 #000,
     1px 1px 0 #c01d2e;
-  font-size: 1.75em;
-  margin-bottom: 10px;*/
+  font-size: 1.75em;*/
+  margin-bottom: 3px;
 }
 
 .controls {
   font-family: 'Montserrat';
-  font-size: 14px;
+  font-size: 0.75em;
   color: #c01d2e;
 }
 

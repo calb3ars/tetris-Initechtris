@@ -156,9 +156,9 @@ const renderGrid = (grid, delta) => {
 };
 
 const render = () => {
-  // ctx.fillStyle = '#fff';
-  // ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   renderGrid(board, {x: 0, y: 0});
   renderGrid(piece.grid, piece.pos);
